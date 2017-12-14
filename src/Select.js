@@ -227,7 +227,7 @@ class Select extends React.Component {
 	handleMouseDown (event) {
 		// if the event was triggered by a mousedown and not the primary
 		// button, or if the component is disabled, ignore it.
-		if (this.props.disabled || (event.type === 'mousedown' && event.button !== 0)) {
+		if (this.props.disabled || (event.type === 'mousedown' && event.button !== 0) || !this.props.openOnClick) {
 			return;
 		}
 
